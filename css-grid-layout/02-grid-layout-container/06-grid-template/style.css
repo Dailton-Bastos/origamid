@@ -1,0 +1,85 @@
+/* Estilos Gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  color: #333;
+  padding-bottom: 60px;
+}
+
+body > div {
+  padding: 40px 0;
+}
+
+body > div:nth-of-type(even) {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.item {
+  margin: 5px;
+  background: tomato;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.grid {
+  max-width: 400px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+}
+
+.grid-template-1 {
+  /* Define primeira a linhas e depois colunas */
+  /* primeira linha de 50px, segunda de 1fr */
+  /* primeira coluna de 100px, segunda coluna de 1fr, terceira de 100px*/
+  /* grid-template: 50px 1fr / 100px 1fr 100px; */
+  grid-template: 100px 50px / repeat(3, 1fr);
+}
+
+.grid-template-2 {
+  grid-template:
+    'logo nav nav' 200px
+    'sidenav content advert' 150px
+    'sidenav footer footer' 150px
+    / 100px 1fr 50px;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.sidenav {
+  grid-area: sidenav;
+}
+
+.content {
+  grid-area: content;
+}
+
+.advert {
+  grid-area: advert;
+}
+
+.footer {
+  grid-area: footer;
+}
