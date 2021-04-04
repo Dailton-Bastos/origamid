@@ -1,0 +1,72 @@
+/* Estilos Gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  color: #333;
+  padding-bottom: 60px;
+}
+
+body > div {
+  padding: 40px 0;
+}
+
+body > div:nth-of-type(even) {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.item {
+  margin: 5px;
+  background: tomato;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.grid {
+  max-width: 400px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px);
+}
+
+.start {
+  align-items: start;
+}
+
+.end {
+  align-items: end;
+}
+
+.center {
+  align-items: center;
+}
+
+.stretch {
+  align-items: stretch;
+}
+
+.item-2,
+.item-3 {
+  grid-row: span 2;
+}
+
+.item-5 {
+  grid-column: span 2;
+}
