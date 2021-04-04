@@ -1,0 +1,65 @@
+/* Estilos Gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  color: #333;
+  padding-bottom: 60px;
+}
+
+body > div {
+  padding: 40px 0;
+}
+
+body > div:nth-of-type(even) {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.item {
+  margin: 5px;
+  background: tomato;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.grid {
+  max-width: 400px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+}
+
+.grid-auto-columns-1 {
+  grid-template-columns: 100px 100px 100px;
+  grid-auto-columns: 1fr;
+}
+
+/* Ele força a criação de 5 colunas */
+.item-6 {
+  grid-column: 6;
+}
+
+.grid-auto-columns-2 {
+  grid-template-columns: 100px 100px;
+  grid-auto-columns: 50px 75px;
+}
+
+.grid-auto-columns-3 {
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: auto;
+}
